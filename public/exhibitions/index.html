@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<!-- <base href="https://www.abhyudayiitb.org/SocialFest-test/exhibitions/" target="_self"> -->
+	<base href="https://www.abhyudayiitb.org/fest/exhibitions/" target="_self">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<title>Socio-Tech Exhibitions | Social Fest 2k21</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+
+	<link rel="stylesheet" href="../assets/css/navbar.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body class="is-preload" onload="GetUser()">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg">
+
+			<a class="navbar-item  no-style-a" href="../">
+				<img src="../assets/Logo.png" alt="" style="width:auto; height:8vh">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav mx-auto text-center">
+					<li class="nav-item">
+						<a class="nav-link nav-text no-style-a" href="../events/index.html">Events</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-text no-style-a" href="../competitions/index.html">Competitions</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-text no-style-a" href="../exhibitions/index.html">Exhibitions</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-text no-style-a" href="../kalamanch/index.html">Kalamanch</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-text no-style-a" href="../quizzing/index.html">Quiz</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-text no-style-a" href="../bazaar/index.html">Rewards</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-text no-style-a" href="../marketing/index.html">Sponsors</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link nav-text no-style-a"
+							href="https://www.abhyudayiitb.org/main2k18/team.html">Team</a>
+					</li>
+					<li>
+						<div id="LoginButtons">
+							<ul style="list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden;">
+								<li class="SocialBtn">
+									<a class="no-style-a" href="../users/auth/facebook"><img
+											src="../assets/images/facebook.svg"
+											style="width:auto; height:3.5vh" /></i></a>
+									&nbsp;
+								</li>
+								<li class="SocialBtn">
+									<a class="no-style-a" href="../users/auth/google"><img
+											src="../assets/images/Google.svg" style="width:auto; height:3.5vh" /></a>
+								</li>
+							</ul>
+						</div>
+						<a class="no-style-a" href="../profile/index.html">
+							<div class="nav-text" id="userData"></div>
+						</a>
+					</li>
+					<li>
+						<a href="../quizzing/leaderboard.html"><img
+								src="https://www.freeiconspng.com/uploads/leaderboard-icon-5.png"
+								style="width:auto; height:3.5vh" alt="Leaderboard" /></a>
+					</li>
+				</ul>
+			</div>
+
+		</nav>
+
+	</div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="index.html" class="logo">
+					<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Abhyuday IIT
+						Bombay</span>
+				</a>
+
+				<!-- Nav -->
+
+			</div>
+		</header>
+
+		<!-- Menu -->
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<header>
+					<h1>Socio-Tech Exhibition</h1>
+					<p></p>
+					<p> Technology shapes society and society shapes technology. Technological innovation is not a
+						panacea to social ailments,
+						but rather a neutral tool that can propagate positive or negative outcomes depending on the
+						circumstances in which
+						technology is developed. When applied
+						critically to certain social problems, technology can help to facilitate
+						significant, positive social change.
+						Ever heard of the term socio-tech before? The so-called socio-tech focus on how technology can
+						be used to establish a
+						best fit between the technical and social aspects of a society.</p>
+					<p>Have a glimpse of some of the exciting socio-tech projects made by students of IIT Bombay.</p>
+				</header>
+				<section class="tiles">
+					<article class="style1">
+						<span class="image">
+							<img src="images/umic.jpg" alt="" />
+						</span>
+						<a href="umic.html">
+							<h2>UMIC IITB</h2>
+							<div class="content">
+								<p>Barcelona Smart Drone Challenge</p>
+							</div>
+						</a>
+					</article>
+					<article class="style2">
+						<span class="image">
+							<img src="images/solarise.jpg" alt="" />
+						</span>
+						<a href="shunya.html">
+							<h2>Team Shunya</h2>
+							<div class="content">
+								<p>This Awesome House Can Generate Energy for Future!</p>
+							</div>
+						</a>
+					</article>
+					<article class="style3">
+						<span class="image">
+							<img src="images/haught.png" alt="" />
+						</span>
+						<a href="n-haught.html">
+							<h2>Project H-naught 2014</h2>
+							<div class="content">
+								<p>H-naught: Team Shunya's Net Positive Energy House</p>
+							</div>
+						</a>
+					</article>
+					<article class="style4">
+						<span class="image">
+							<img src="images/ctara.jpeg" alt="" />
+						</span>
+						<a href="ctara.html">
+							<h2>CTARA-</h2>
+							<div class="content">
+								<p>Microgrid based electrification</p>
+							</div>
+						</a>
+					</article>
+					<article class="style5">
+						<span class="image">
+							<img src="images/gis.jpeg" alt="" />
+						</span>
+						<a href="gis.html">
+							<h2>CTARA</h2>
+							<div class="content">
+								<p>Route mapping and optimization for solid waste management using GIS</p>
+							</div>
+						</a>
+					</article>
+					<article class="style6">
+						<span class="image">
+							<img src="images/rutag.jpeg" alt="" />
+						</span>
+						<a href="rutag.html">
+							<h2>CTARA</h2>
+							<div class="content">
+								<p>Design modifications in RuTAG IIT Bombay fish cages.</p>
+							</div>
+						</a>
+					</article>
+				</section>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="copyright align-center">
+					<li>&copy; Abhyuday IIT Bombay. All rights reserved</li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="../config.js"></script>
+
+	<script src='../assets/js/GetUser.js'></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="https://www.abhyudayiitb.org/fest/quizzing/" target="_self">
+    <!-- <base href="https://www.abhyudayiitb.org/SocialFest-test/quizzing/" target="_self"> -->
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Quiz | Social Fest 2k21</title>
+    <style>
+        #ajax-loading {
+            background-image: url('../assets/Blocks-1s-200px.gif');
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            /* to make it responsive */
+            width: 100vw;
+            /* to make it responsive */
+            overflow: hidden;
+            /*to remove scrollbars */
+            z-index: 99999;
+            /*to make it appear on topmost part of the page */
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body onload="GetUser();getQuiz()">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+
+            <a class="navbar-item  no-style-a" href="../">
+                <img src="../assets/Logo.png" alt="" style="width:auto; height:8vh">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../events/index.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../competitions/index.html">Competitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../exhibitions/index.html">Exhibitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../kalamanch/index.html">Kalamanch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../quizzing/index.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../bazaar/index.html">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../marketing/index.html">Sponsors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="https://www.abhyudayiitb.org/main2k18/team.html">Team</a>
+                    </li>
+                    <li>
+                        <div id="LoginButtons">
+                            <ul style="list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden;">
+                                <li class="SocialBtn">
+                                    <a class="no-style-a" href="../users/auth/facebook"><img src="../assets/images/facebook.svg" style="width:auto; height:3.5vh" /></i>
+                                    </a>
+                                    &nbsp;
+                                </li>
+                                <li class="SocialBtn">
+                                    <a class="no-style-a" href="../users/auth/google"><img src="../assets/images/Google.svg" style="width:auto; height:3.5vh" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="no-style-a" href="../profile/index.html">
+                            <div class="nav-text" id="userData"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../quizzing/leaderboard.html"><img src="https://www.freeiconspng.com/uploads/leaderboard-icon-5.png" style="width:auto; height:3.5vh" alt="Leaderboard" /></a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </div>
+
+    <div id="ajax-loading">
+    </div>
+    <h1></h1>
+    <div class="quiz-container row">
+        <div class="col">
+            <div id="quiz"></div>
+
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="row">
+        <div class="col">
+            <button id="previous">Previous Question</button>
+            <button id="next">Next Question</button>
+            <button id="submit">Submit Quiz</button>
+        </div>
+    </div>
+    <!-- <button id="previous">Previous Question</button>
+    <button id="next">Next Question</button>
+    <button id="submit">Submit Quiz</button> -->
+    <div id="results"></div>
+
+    <script src='../config.js'></script>
+    <script src='../assets/js/GetUser.js'></script>
+    <script src="assets/js/quizScript.js"></script>
+    <script src="assets/js/renderQuiz.js"></script>
+    <script>
+        $(document).ajaxSend(function() {
+            $('#ajax-loading').fadeIn(250);
+        });
+        $(document).ajaxComplete(function() {
+            $('#ajax-loading').fadeOut(250);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

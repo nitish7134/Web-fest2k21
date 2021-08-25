@@ -1,0 +1,64 @@
+nav {
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 10vh;
+    width: auto;
+    z-index: 1000;
+}
+li{
+    padding-top: 1vh;
+    padding-left: 1vw;
+}
+.nav-text {
+    color: black;
+    font-family: Lato;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    height: 8vh;
+    width: 7vw;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#LoginButtons {
+    display: block;
+}
+
+@media(max-width: 992px) {
+    .no-style-a {
+        font-size: 3vh;
+        color: white;
+    }
+    #userData{
+        color: white;
+    }
+    #navbarNavDropdown{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+@media(min-width: 992px){
+    .no-style-a {
+        font-size: 2vh;
+    }
+    .SocialBtn{
+        float:left
+    }
+}
+.no-style-a {
+    font-style: unset !important;
+    text-transform: unset !important;
+    margin-top: unset !important;
+    margin-bottom: unset !important;
+    line-height: unset !important;
+    margin: unset !important;
+    display: unset !important;
+    -webkit-margin-before: unset !important;
+    -webkit-margin-after: unset !important;
+    -webkit-margin-start: unset !important;
+    -webkit-margin-end: unset !important;
+    transition: unset !important;
+    border-bottom: unset !important;
+    text-decoration: unset !important;
+    box-sizing: unset !important;
+}

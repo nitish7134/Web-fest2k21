@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <base href="https://www.abhyudayiitb.org/fest/events/" target="_self">
+    <!-- <base href="https://www.abhyudayiitb.org/fest/events/" target="_self"> -->
+
+    <title>Events | Abhyuday IITB</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        .eventImage {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+<body class="is-preload" onload="GetUser()">
+
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+
+            <a class="navbar-item  no-style-a" href="../">
+                <img src="../assets/Logo.png" alt="" style="width:auto; height:8vh">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../events/index.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../competitions/index.html">Competitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../exhibitions/index.html">Exhibitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../kalamanch/index.html">Kalamanch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../quizzing/index.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../bazaar/index.html">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../marketing/index.html">Sponsors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="https://www.abhyudayiitb.org/main2k18/team.html">Team</a>
+                    </li>
+                    <li>
+                        <div id="LoginButtons">
+                            <ul style="list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden;">
+                                <li class="SocialBtn">
+                                    <a class="no-style-a" href="../users/auth/facebook"><img src="../assets/images/facebook.svg" style="width:auto; height:3.5vh" /></i>
+                                    </a>
+                                    &nbsp;
+                                </li>
+                                <li class="SocialBtn">
+                                    <a class="no-style-a" href="../users/auth/google"><img src="../assets/images/Google.svg" style="width:auto; height:3.5vh" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="no-style-a" href="../profile/index.html">
+                            <div class="nav-text" id="userData"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../quizzing/leaderboard.html"><img src="https://www.freeiconspng.com/uploads/leaderboard-icon-5.png" style="width:auto; height:3.5vh" alt="Leaderboard" /></a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </div>
+
+
+    <!-- Header -->
+    <div id="header">
+        <span class="logo icon fa-paper-plane"></span>
+        <h1>Events</h1>
+        <p>Throughout the year Events at Abhyuday organizes lectures, workshops, <br />panel,conferences,blood donation camps and collaborated <br /> events with eminent social organizations.</p>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+
+        <div class="box alt container">
+            <section class="feature left">
+                <a href="https://event.webinarjam.com/channel/Biomimicry" class="image icon solid"><img class="eventImage" src="images/biomimicry.jpg" alt="" /></a>
+                <div class="content">
+                    <h3>Biomimicry</h3>
+                    <p>What is Biomimicry?<br> Biomimicry looks up to nature to provide inspiration and direction to solve our most pressing challenges sustainably. In other words, it is innovation inspired by nature. For more info, register!
+                        <br>
+                        <strong>23/01/21 11:00am to 12 noon</strong>
+
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="feature right">
+                <a href="https://event.webinarjam.com/channel/SelfDevelopment" class="image icon solid"><img class="eventImage" src="images/personality.jpg" alt="" /></a>
+                <div class="content">
+                    <h3>Personality Development</h3>
+                    <p>This workshop will help you to create a good mindset and gestures which are required in job opportunities and for a better human being. Also you will learn how to develop your behavior & maturity of mind in various situations.<br><strong>24th jan 1:00-2:00 pm</strong></p>
+                </div>
+            </section>
+
+            <section class="feature left">
+                <a href="https://event.webinarjam.com/channel/YouthforIndia" class="image icon solid"><img class="eventImage" src="images/sbi-yfi.jpeg" alt="" /></a>
+                <div class="content">
+                    <h3>SBI Youth for India Fellows</h3>
+                    <p>Shriti Pandey is an SBI Youth for India fellow from batch 2017-18. She is also the founder of the social enterprise 'Strawcture' - work for which she started in her YFI fellowship. She will be sharing her rural entrepreneurship journey
+                        in this session.<br><strong>23rd Jan 2:00-3:00 PM</strong></p>
+                </div>
+            </section>
+
+            <section class="feature right">
+                <a href="https://event.webinarjam.com/go/live/13/yvlm1cyh0s1sr" class="image icon solid"><img class="eventImage" src="images/women.jpeg" alt="" /></a>
+                <div class="content">
+                    <h3>Women in Business</h3>
+                    <p>We are organizing a session on the topic of women in business. We are going to discuss the implications of not tapping the potential of women in the economic labour force. The event will take place in association with the Edelgive
+                        Foundation.
+                        <br> <strong>23rd Jan 2:00 - 3:00 pm</stronng>
+					</p>
+				</div>
+			</section>
+
+			<section class="feature left">
+				<a href="https://event.webinarjam.com/channel/MentalHealthWorkshop" class="image icon solid"><img
+						class="eventImage" src="images/mhw.jpg" alt="" /></a>
+				<div class="content">
+					<h3>Khairiyat</h3>
+					<p>The workshop is meant to create healthier minds, body and emotions. What’s unique about it is
+						there is almost no Gyaan and only Kaam in the workshop, in simpler words - the entire workshop
+						is activity based.<br><strong>Date: 23rd January, 2021 Time: 3-4 PM </strong></Sr>
+                    </p>
+                </div>
+            </section>
+
+            <section class="feature right">
+                <a href="https://event.webinarjam.com/channel/OdysseyofCareers" class="image icon solid"><img class="eventImage" src="images/ooc.jpeg" alt="" /></a>
+                <div class="content">
+                    <h3>Treaded Street v0.0<br> Priyal Keni</h3>
+                    <p>Presenting the first speaker of the career guidance series, Treaded Street, Ms. Priyal Keni, McKinsey Next Gen. Women Leader, and currently a consultant at Deloitte, India.<br><strong>23rd
+							Time 4:00 - 5:00pm</strong></p>
+                </div>
+            </section>
+
+            <section class="feature left">
+                <a href="https://event.webinarjam.com/channel/Ecotopia" class="image icon solid"><img class="eventImage" src="images/ecotopia.jpg" alt="" /></a>
+                <div class="content">
+                    <h3>Ecotopia</h3>
+                    <p>Abhyuday IIT Bombay welcomes all the panellist to the panel discussion on Sustainable development in 'Ecotopia'. We have with us Daniel Hartz - Founder and CEO Sustainability Champions also a researcher, analyst andauthor. Also joining
+                        Dr. Ekta Choudhary, Shruti Jain, and Jayanta Bandyopadhyay
+                        <br><strong>Date 24/01/21 Time 11:00am-12:00pm</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="feature right">
+                <a href="https://event.webinarjam.com/channel/YouthinSocialimpact" class="image icon solid"><img class="eventImage" src="images/TFI.jpg" alt="" /></a>
+                <div class="content">
+                    <h3>Youth in Social Impact</h3>
+                    <p>It will be a session on careers in social impact ,understanding the social sector. There will be Teach For India alumni from IITs and how they’ve made a career in the social sector.
+                        <br><strong>24th January, 2021
+							Time : 12-1 pm</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="feature left">
+                <a href="https://event.webinarjam.com/channel/CareerOpportunity1" class="image icon solid"><img class="eventImage" src="images/ts1.jpg" alt="" /></a>
+                <div class="content">
+                    <h3>Treaded Street v1.0</h3>
+                    <p>Career in politics <br> Launching the second speaker of the Treaded Street series, Mr. Jayant Sinha, Member of Parliament and Chairperson for Standing Committee on Finance. Join us live for the session, register fast!
+                        <br><strong>24th jan
+							Time : 2:00 - 3:00 pm</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="feature right">
+                <a href="https://event.webinarjam.com/channel/Inequality" class="image icon solid"><img class="eventImage" src="images/ineuqlity.jpeg" alt="" /></a>
+                <div class="content">
+                    <h3>The Widening Gap</h3>
+                    <p> Inequality crisis in India<br>
+                        <strong>Event Speaker</strong> Amitabh Behar is the CEO of Oxfam India
+                        <strong>>Description</strong> : Talk show on “The widening Gap : Inequality crisis in India”
+                        <strong>24th Jan 2021 1:00-2:00 pm</strong>
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="feature left">
+                <a href="https://event.webinarjam.com/channel/CareerOpportunity2" class="image icon solid"><img class="eventImage" src="images/ts2.jpg" alt="" /></a>
+                <div class="content">
+                    <h3>Treaded Street v2.0</h3>
+                    <p>Career in bureaucracy<br> Presenting to you the third speaker of the career guidance series, Treaded Street, we have Mr Karn Satyarthi, IAS (2016 batch). He is currently serving as the Director of Land Acquisition, Land Records and
+                        Measurement, Government of Jharkhand
+                        <br><strong>24th jan
+							Time : 4:00 - 5:00 pm</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="feature right">
+                <a href="#" class="image icon solid"><img class="eventImage" src="images/cei.jpg" alt="" /></a>
+                <div class="content">
+                    <h3>Empowerment•Innovation<br>Revolution</h3>
+                    <p>"Applying Advanced Technologies to bring Holistic Empowerment to Rural and Tribal Areas and How the Learnings from these can be Invaluable to a Future IT Professional & Entrepreneur“. The panelists will dedicate a good segment to socio
+                        tech aspects - especially how they were able to bring a revolution using socio tech."
+                        <br><strong>24th January, 2021
+							Time: 3-4 pm</strong>
+                    </p>
+                </div>
+            </section>
+
+            <!-- ************************* -->
+
+
+            <footer class="major container medium">
+                <h3>Towards a better society</h3>
+                <section>
+                    <header>
+                        <h4>About Us</h4>
+                    </header>
+                    <blockquote>Abhyuday, started in 2014, with a group of socially inclined students who felt the need for a body, which provides opportunities to the students of the institute who wish to work for a better society.
+                    </blockquote>
+                </section>
+            </footer>
+
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container medium">
+                <ul class="icons">
+                    <li><a href="https://twitter.com/Abhyuday_IITB/" class="icon brands fa-twitter"><span
+								class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/abhyuday.iitb/" class="icon brands fa-facebook-f"><span
+								class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/iitbombay_abhyuday/" class="icon brands fa-instagram"><span
+								class="label">Instagram</span></a></li>
+                </ul>
+
+                <ul class="copyright">
+                    <li>&copy; Abhyuday IIT Bombay 2020. All rights reserved.</li>
+                    <!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="../config.js"></script>
+        <script src='../assets/js/GetUser.js'></script>
+        <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

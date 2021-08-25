@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="https://www.abhyudayiitb.org/fest/utility/" target="_self">
+    <!-- <base href="https://www.abhyudayiitb.org/fest/utility/" target="_self"> -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Create Quiz</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <form class="d-block" id="quizNameForm" onsubmit="return false">
+                <div class="row">
+                    <div class="col-3">
+                        <input type="text" name="quizName" id="" placeholder="Quiz name">
+                    </div>
+                    <div class="col-3">
+                        <input type="time" name="startTime" id="" placeholder="Start time">
+                    </div>
+                    <div class="col-3">
+                        <input type="time" name="endTime" id="" placeholder="End time">
+                    </div>
+                    <div class="col-3">
+                        <input type="date" name="Date" id="" placeholder="date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-1 text-center">
+                        <!-- <a> onclick="postName()"> Submit</a> -->
+                        <!-- <input type="submit" onclick="postName()"> -->
+                        <button type="button" onclick="postName()"> Submit</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <form class="d-none" id="quizQuesForm" onsubmit="return false">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" name="question" id="" placeholder="Question statement">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <input type="text" name="OptOne" id="" placeholder="option one">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="OptTwo" id="" placeholder="option two">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="OptThree" id="" placeholder="option three">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="OptFour" id="" placeholder="option four">
+                    </div>
+                    <div class="row">
+                        <input type="number" name="correctOpt" id="" placeholder="Correct option number">
+                    </div>
+                    <div class="row">
+                        <input type="number" name="score" id="" placeholder="Score">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-1 text-center">
+                        <!-- <a> onclick="postName()"> Submit</a> -->
+                        <!-- <input type="submit" onclick="postName()"> -->
+                        <button type="button" onclick="postQuestion()"> Submit</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../config.js"></script>
+
+    <script>
+        var quizId;
+        // to post the name and start time endtime of the quiz
+
+        function postName() {
+            var rawData = $('#quizNameForm').serializeArray();
+            console.log(rawData);
+
+            var quizJSON = {};
+            quizJSON.QuizName = rawData[0].value;
+            quizJSON.startTime = new Date(rawData[3].value + ' ' + rawData[1].value);
+            quizJSON.endTime = new Date(rawData[3].value + ' ' + rawData[2].value);
+            $.ajax({
+                url: config.baseUrl + "/quiz",
+                type: "POST",
+                data: quizJSON,
+                credentials: 'same-origin',
+                success: function(response) {
+                    console.log("Posted quiz successfully");
+                    console.log(response);
+                    quizId = response._id;
+                },
+                error(err) {
+                    console.log(err);
+                }
+            });
+
+            document.getElementById('quizNameForm').classList.remove('d-block');
+            document.getElementById('quizQuesForm').classList.remove('d-none');
+            document.getElementById('quizNameForm').classList.add('d-none');
+            document.getElementById('quizQuesForm').classList.add('d-block');
+        }
+
+        function postQuestion() {
+            var rawData = $('#quizQuesForm').serializeArray();
+            console.log(rawData);
+
+            var quizJSON = {};
+            quizJSON.QuestionStatement = rawData[0].value;
+            quizJSON.options = [rawData[1].value, rawData[2].value, rawData[3].value, rawData[4].value];
+            quizJSON.CorrectOption = rawData[5].value;
+            quizJSON.score = rawData[6].value;
+
+            console.log(quizJSON);
+            $.ajax({
+                url: config.baseUrl + "/quiz/" + quizId + "/questions",
+                type: "POST",
+                data: quizJSON,
+                credentials: 'same-origin',
+                success: function(response) {
+                    console.log("Posted quiz Questions successfully");
+                    console.log(response);
+                    quizID = response._id;
+                },
+                error(err) {
+                    console.log(err);
+                }
+            });
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+	<base href="https://www.abhyudayiitb.org/fest/bazaar/" target="_self">
+	<!-- <base href="https://www.abhyudayiitb.org/fest/bazaar/" target="_self"> -->
+
+	<!-- Latest compiled and minified CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<title>Bazaar | Abhyuday IIT Bombay</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/navbar.css" />
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<style>
+		#ajax-loading {
+			background-image: url('../assets/Blocks-1s-200px.gif');
+			background-repeat: no-repeat;
+			background-position: center center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100vw;
+			overflow: hidden;
+			z-index: 99999;
+			display: none;
+		}
+	</style>
+</head>
+
+<body class="is-preload" onload="GetUser();GetMarket()">
+
+	<div id="ajax-loading">
+	</div>
+
+	<div id="page-wrapper">
+		<!-- 	
+		<header id="header" class="alt">
+			<h1><a href="index.html">Bazaar</a></h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Log In</a></li>
+					<li><a href="#">Sign Up</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav> -->
+		<div class="container">
+			<nav class="navbar navbar-expand-lg">
+	
+				<a class="navbar-item  no-style-a" href="../">
+					<img src="../assets/Logo.png" alt="" style="width:auto; height:8vh">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav mx-auto text-center">
+						<li class="nav-item">
+							<a class="nav-link nav-text no-style-a" href="../events/index.html">Events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-text no-style-a" href="../competitions/index.html">Competitions</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-text no-style-a" href="../exhibitions/index.html">Exhibitions</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-text no-style-a" href="../kalamanch/index.html">Kalamanch</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-text no-style-a" href="../quizzing/index.html">Quiz</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-text no-style-a" href="../bazaar/index.html">Rewards</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-text no-style-a" href="../marketing/index.html">Sponsors</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-text no-style-a"
+								href="https://www.abhyudayiitb.org/main2k18/team.html">Team</a>
+						</li>
+						<li>
+							<div id="LoginButtons">
+								<ul style="list-style-type: none;
+								margin: 0;
+								padding: 0;
+								overflow: hidden;">
+									<li class="SocialBtn">
+										<a class="no-style-a" href="../users/auth/facebook"><img
+												src="../assets/images/facebook.svg"
+												style="width:auto; height:3.5vh" /></i></a>
+										&nbsp;
+									</li>
+									<li class="SocialBtn">
+										<a class="no-style-a" href="../users/auth/google"><img src="../assets/images/Google.svg"
+												style="width:auto; height:3.5vh" /></a>
+									</li>
+								</ul>
+							</div>
+							<a class="no-style-a" href="../profile/index.html">
+								<div class="nav-text" id="userData"></div>
+							</a>
+						</li>
+						<li>
+							<a href="../quizzing/leaderboard.html"><img
+									src="https://www.freeiconspng.com/uploads/leaderboard-icon-5.png"
+									style="width:auto; height:3.5vh" alt="Leaderboard" /></a>
+						</li>
+					</ul>
+				</div>
+	
+			</nav>
+	
+		</div>
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<div class="logo">
+					<span class="icon fa-map"></span>
+				</div>
+				<h2>Rewards</h2>
+				<p> Marketplace for all your coins! Buy exciting gifts here ❤️</p>
+
+				<h4 >Participate in various activities and perform the below tasks to get the Coins:</h4>
+				<ul>
+					<ol>1) Register in the events and get 150 <i class="fa fa-bitcoin fa-coins"></i> per event</ol>
+					<ol>2) Answer correctly to the Quiz questions and get 180 <i class="fa fa-bitcoin fa-coins"></i> per event</ol>
+					<ol>3) To know about our sponsor, watch videos and get 500 <i class="fa fa-bitcoin fa-coins"></i> per video</ol>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Wrapper -->
+		<section id="wrapper"></section>
+
+		<!-- Instructions -->
+		<section id="footer">
+			<div class="inner">
+				<!-- <h4 class="major">Participate in various activities and perform the below tasks to get the Coins:</h4>
+				<ul>
+					<ol>Register in the events and get 150 <i class="fa fa-bitcoin fa-coins"></i> per event</ol>
+					<ol>Answer correctly to the Quiz questions and get 180 <i class="fa fa-bitcoin fa-coins"></i> per event</ol>
+					<ol>To know about our sponsor, watch videos and get 500 <i class="fa fa-bitcoin fa-coins"></i> per video</ol>
+				</ul> -->
+
+				<ul class="copyright align-center">
+					<li>&copy; Abhyuday IITB 2020. All rights reserved.</li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+
+	<script>
+		$(document).ajaxSend(function () {
+			$('#ajax-loading').fadeIn(250);
+		});
+		$(document).ajaxComplete(function () {
+			$('#ajax-loading').fadeOut(250);
+		});
+	</script>
+	<script src="../config.js"></script>
+	<script src="./assets/js/jquery.scrollex.min.js"></script>
+	<script src="./assets/js/marketScript.js"></script>
+	<script src="./assets/js/renderMarket.js"></script>
+	<script src="./assets/js/browser.min.js"></script>
+	<script src="./assets/js/breakpoints.min.js"></script>
+	<script src="./assets/js/util.js"></script>
+	<script src="./assets/js/main.js"></script>
+	<script src='../assets/js/GetUser.js'></script>
+
+</body>
+
+</html>

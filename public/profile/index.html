@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<!--
+	Astral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<base href="https://www.abhyudayiitb.org/fest/profile/" target="_self">
+	<!-- <base href="https://www.abhyudayiitb.org/SocialFest-test/profile/" target="_self"> -->
+
+	<title>Profile Page</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="../assets/css/navbar.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="../assets/favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="../assets/favicons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload" onload="UserRender();">
+
+	<div class="container">
+        <nav class="navbar navbar-expand-lg">
+
+            <a class="navbar-item  no-style-a" href="../">
+                <img src="../assets/Logo.png" alt="" style="width:auto; height:8vh">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../events/index.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../competitions/index.html">Competitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../exhibitions/index.html">Exhibitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../kalamanch/index.html">Kalamanch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../quizzing/index.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../bazaar/index.html">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a" href="../marketing/index.html">Sponsors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text no-style-a"
+                            href="https://www.abhyudayiitb.org/main2k18/team.html">Team</a>
+                    </li>
+                    <li>
+                        <div id="LoginButtons">
+                            <ul style="list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden;">
+                                <li class="SocialBtn">
+                                    <a class="no-style-a" href="../users/auth/facebook"><img
+                                            src="../assets/images/facebook.svg"
+                                            style="width:auto; height:3.5vh" /></i></a>
+                                    &nbsp;
+                                </li>
+                                <li class="SocialBtn">
+                                    <a class="no-style-a" href="../users/auth/google"><img src="../assets/images/Google.svg"
+                                            style="width:auto; height:3.5vh" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="no-style-a" href="../profile/index.html">
+                            <div class="nav-text" id="userData"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../quizzing/leaderboard.html"><img
+                                src="https://www.freeiconspng.com/uploads/leaderboard-icon-5.png"
+                                style="width:auto; height:3.5vh" alt="Leaderboard" /></a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </div>
+	<!-- Wrapper-->
+	<div id="wrapper">
+		<!-- Nav -->
+		<nav id="nav">
+			<a href="#" class="icon solid fa-home"><span>Information</span></a>
+			<a href="#Orders" class="icon solid fa-folder"><span>Purchased Items</span></a>
+			<a href="#Quiz" class="icon solid fa-envelope"><span>Quiz Details</span></a>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Me -->
+			<article id="home" class="panel intro">
+				<header id="firstPage">
+				</header>
+
+				<a href="#Orders" class="jumplink pic">
+					<span class="arrow icon solid fa-chevron-right"><span>My Orders
+						</span></span>
+					<img src="images/me.jpg" alt="" />
+				</a>
+
+			</article>
+
+			<!-- Work -->
+			<article id="Orders" class="panel">
+				<a href="#home" class="jumplink pic">
+					<span class="arrow icon solid fa-chevron-left"><span>About Me
+						</span></span>
+				</a>
+				<header>
+					<h2>My Orders</h2>
+				</header>
+				<section>
+					<div class="row row-cols-1 row-cols-md-3 g-4" id="productDiv"></div>
+				</section>
+
+				<a href="#Quiz" class="jumplink pic">
+					<span class="arrow icon solid fa-chevron-right">
+						<span>Quiz History
+						</span>
+				</a>
+			</article>
+
+
+			<article id="Quiz" class="panel">
+				<a href="#Orders" class="jumplink pic">
+					<span class="arrow icon solid fa-chevron-left"><span>My Orders
+						</span></span>
+				</a>
+				<header>
+					<h2>Quiz History</h2>
+				</header>
+				<section>
+					<div class="row row-cols-1 row-cols-md-3 g-4" id="QuizDiv"></div>
+				</section>
+			</article>
+
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		<ul class="copyright">
+			<li>&copy; Abhyuday IIT Bombay 2020</li>
+		</ul>
+	</div>
+
+	</div>
+	<script src="../config.js"></script>
+	<!-- Scripts -->
+	<script>
+
+		function UserRender() {
+			var curUser;
+			$.ajax({
+				url: config.baseUrl + "/users",
+				type: "GET",
+				success: function (response) {
+					curUser = response.user
+					response = response.user
+					document.getElementById("userData").innerHTML = `<i class="fa fa-bitcoin fa-coins"></i>&nbsp;${response.coins}&nbsp;&nbsp;<i class="fa fa-user" aria-hidden="true"></i>&nbsp;${response.firstname}`;
+					document.getElementById("LoginButtons").style.display = "none"
+					var output = `
+						<h1>${curUser.firstname} ${curUser.lastname}</h1><br/>
+						<p><strong>Total Value:</strong> ${curUser.totalValue}</p><br>
+						<p><strong>Email Id:</strong> <strong>${curUser.email}</strong></p><br>
+						<p><strong>Coins:</strong> ${curUser.coins}&nbsp;&nbsp;<strong>Asset Value:</strong> ${curUser.assetValue}</p>
+					`;
+					document.getElementById("firstPage").innerHTML = output;
+
+					output = [];
+
+					for (var i = 0; i < curUser.purchasedItems.length; i++) {
+						output.push(`
+						<div class="col">
+							<div class="card h-100">
+								<img src="../bazaar/images/${curUser.purchasedItems[i].imageName}.jpg" class="card-img-top" alt="product images">
+								<div class="card-body">
+									<h5 class="card-title">${curUser.purchasedItems[i].itemName}</h5>
+
+								</div>
+								<div class="card-footer">
+									<small>Quantity: ${curUser.purchasedItems[i].quantity}</small>
+								</div>
+							</div>
+						</div>`);
+					}
+					document.getElementById("productDiv").innerHTML = output.join('');
+					output = [];
+
+					for (var i = 0; i < curUser.quizzes.length; i++) {
+						output.push(`
+						<div class="col-6 text-center">
+							${curUser.quizzes[i].quiz}
+						</div>
+						<div class="col-6 text-center">
+							${curUser.quizzes[i].score}
+						</div>
+						`);
+					}
+					document.getElementById("QuizDiv").innerHTML = output.join('');
+				}, error: function (err) {
+					window.location.replace('../error/?index=2');
+				}
+			})
+
+		}
+
+	</script>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
